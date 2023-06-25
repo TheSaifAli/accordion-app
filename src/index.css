@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  background-color:#B3B6B7;
+}
+.myanime{
+  animation: answerAnime .5s ease-in-out;
+  transition: all;
+}
+@keyframes answerAnime {
+  0%{
+    opacity: 0;
+    padding-top: 0px;
+  }
+  50%{
+    opacity: 50;
+    padding-top: 4px;
+  }
+  100%{
+    opacity: 100;
+    padding-top: 8px;
+  }
+  
+}
+.iconAnime{
+  animation: iconAnime .5s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes iconAnime {
+  0%{
+      transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(75deg);
+  }
+  100%{
+    transform: rotate(150deg);
+  }
 }
